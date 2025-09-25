@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.framework</groupId>
+    <artifactId>selenium-cucumber-framework</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <!--  Selenium  -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.28.0</version>
+        </dependency>
+        <!--  Cucumber  -->
+        <!--         Las anotaciones de Cucumber como @Given, @When, @Then, @And. -->
+        <!--         El engine de ejecución de steps (cómo vincula tus escenarios .feature con tus clases Java). -->
+        <!--         El binding entre Gherkin y Java. -->
+        <!--         💡 Sin esta dependencia, no podrías escribir ni ejecutar step definitions en Java. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.20.1</version>
+        </dependency>
+        <!--         👉 Es el puente entre Cucumber y JUnit. -->
+        <!--         Sirve para: -->
+        <!--         Integrar los escenarios de Cucumber como tests JUnit (para que se ejecuten con mvn test, en tu IDE, o en pipelines). -->
+        <!--         Permitir usar un runner JUnit (clases con @RunWith(Cucumber.class) o con JUnit 5, @Cucumber test). -->
+        <!--         Generar reports y resultados de ejecución como parte del ciclo de JUnit. -->
+        <!--         💡 Sin esta dependencia, podrías escribir tus escenarios .feature, pero no tendrías forma de correrlos como tests automatizados dentro de JUnit/Maven/IDE. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.20.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--  JUnit 4  -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
