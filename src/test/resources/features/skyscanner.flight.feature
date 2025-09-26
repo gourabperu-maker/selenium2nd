@@ -1,5 +1,5 @@
 
-
+@Reg
 Feature: Basic flight search on Skyscanner
   As a user
   I want to search for flights
