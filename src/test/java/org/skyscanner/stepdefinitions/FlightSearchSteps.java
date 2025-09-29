@@ -4,10 +4,19 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.skyscanner.hooks.Hooks;
+import org.skyscanner.pages.FlightPage;
 
 public class FlightSearchSteps {
+
+    private FlightPage flightPage;
+
+
+
+
     @Given("I am on the Skyscanner flights page")
     public void iAmOnTheSkyscannerFlightsPage() {
+        flightPage = new FlightPage(Hooks.driver);
     }
 
     @And("I have selected {string}")
